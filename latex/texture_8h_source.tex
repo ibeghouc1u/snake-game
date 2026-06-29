@@ -1,0 +1,79 @@
+\doxysection{texture.\+h}
+\hypertarget{texture_8h_source}{}\label{texture_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TEXTURE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TEXTURE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ JOUER\ 1}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ QUITTER\ 2}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00020\ \ \ \ \ SDL\_Rect\ rect;\ \ \textcolor{comment}{//\ Rectangle\ de\ position\ et\ de\ taille\ du\ bouton}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ action;\ \ \ \ \ \ \textcolor{comment}{//\ Action\ associée\ au\ bouton\ (par\ exemple,\ JOUER,\ QUITTER)}}
+\DoxyCodeLine{00022\ \}\ \mbox{\hyperlink{struct_bouton}{Bouton}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Variables\ globales\ de\ SDL}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ SDL\_Window*\ window;}
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ SDL\_Renderer*\ renderer;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{extern}\ SDL\_Texture*\ background\ ;}
+\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ SDL\_Texture*\ snakeTexture\ ;}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ SDL\_Texture*\ foodTexture\ ;}
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ SDL\_Texture*\ rabbitTexture\ ;}
+\DoxyCodeLine{00032\ \textcolor{keyword}{extern}\ SDL\_Texture*\ bodyTexture\ ;}
+\DoxyCodeLine{00033\ \textcolor{keyword}{extern}\ SDL\_Texture*\ rocksTexture\ ;}
+\DoxyCodeLine{00034\ \textcolor{keyword}{extern}\ SDL\_Texture*\ texte;}
+\DoxyCodeLine{00035\ \textcolor{keyword}{extern}\ SDL\_Texture*\ textureTexteJouer\ ;}
+\DoxyCodeLine{00036\ \textcolor{keyword}{extern}\ SDL\_Texture*\ textureTexteQuitter\ ;}
+\DoxyCodeLine{00037\ \textcolor{keyword}{extern}\ SDL\_Texture*\ menuTexture\ ;}
+\DoxyCodeLine{00038\ \textcolor{keyword}{extern}\ SDL\_Texture*\ scoreTexture\ ;}
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ lastDirection\ ;}
+\DoxyCodeLine{00040\ \textcolor{keyword}{extern}\ \ \textcolor{keywordtype}{int}\ dansMenu\ ;}
+\DoxyCodeLine{00041\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_bouton}{Bouton}}\ boutonJouer;}
+\DoxyCodeLine{00042\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_bouton}{Bouton}}\ boutonQuitter;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00052\ SDL\_Texture*\ charger\_texte(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message,\ SDL\_Renderer*\ renderer,TTF\_Font\ *font,\ SDL\_Color\ color);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ SDL\_ExitWithError(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *message);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ SDL\_exit(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *message,SDL\_Window\ *window\ ,SDL\_Renderer\ *rendu);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ SDL\_Texture*\ charger\_image(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nomfichier,\ SDL\_Renderer\ *renderer);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \textcolor{keywordtype}{void}\ initial();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ initialBouton();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ handleInput();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ renderMenu();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \textcolor{keywordtype}{void}\ rendersnake();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ renderFood();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ renderRabbit();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ rendertext();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{void}\ renderScore();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ renderRocks();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \textcolor{keywordtype}{void}\ render();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \textcolor{keywordtype}{void}\ boucle\_jeu();}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{void}\ cleanup();\ }
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TEXTURE\_H}}
+
+\end{DoxyCode}

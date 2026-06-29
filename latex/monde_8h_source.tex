@@ -1,0 +1,88 @@
+\doxysection{monde.\+h}
+\hypertarget{monde_8h_source}{}\label{monde_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MONDE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MONDE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SCREEN\_WIDTH\ 800}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SCREEN\_HEIGHT\ 600}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ CELL\_SIZE\ 20}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ lignes\ 30}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ colonnes\ 40}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00035\ \}\ \mbox{\hyperlink{struct_point}{Point}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{struct_velocity}{Velocity}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_snake_segment}{SnakeSegment}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ position;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_snake_segment}{SnakeSegment}}*\ next;}
+\DoxyCodeLine{00050\ \}\ \mbox{\hyperlink{struct_snake_segment}{SnakeSegment}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{struct_snake_segment}{SnakeSegment}}*\ tete;}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{struct_snake_segment}{SnakeSegment}}*\ taille;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ length;}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{struct_velocity}{Velocity}}\ velocity;}
+\DoxyCodeLine{00060\ \}\ \mbox{\hyperlink{struct_snake}{Snake}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ position;}
+\DoxyCodeLine{00067\ \}\ \mbox{\hyperlink{struct_food}{Food}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00074\ \}\ \mbox{\hyperlink{struct_rabbit}{Rabbit}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00081\ \}\ \mbox{\hyperlink{struct_rock}{Rock}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{//Variables\ globales\ de\ jeu}}
+\DoxyCodeLine{00086\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_snake}{Snake}}\ snake;}
+\DoxyCodeLine{00087\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_rabbit}{Rabbit}}\ rabbit;}
+\DoxyCodeLine{00088\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ gameover;}
+\DoxyCodeLine{00089\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_food}{Food}}\ food;}
+\DoxyCodeLine{00090\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00091\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ rabbitVisible;}
+\DoxyCodeLine{00092\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ applesEaten\ ;}
+\DoxyCodeLine{00093\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ NUM\_ROCKS;}
+\DoxyCodeLine{00094\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_rock}{Rock}}\ *rocks;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ addBodySegment();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ initialSerpent();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{void}\ initRocksFromLayout();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00116\ \textcolor{keywordtype}{int}\ isInsideRocks(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{void}\ AlearFood();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \textcolor{keywordtype}{void}\ AlearRabbit();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \textcolor{keywordtype}{void}\ ControlLimiteBorne(\textcolor{keywordtype}{int}*\ positionX,\ \textcolor{keywordtype}{int}*\ positionY);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{void}\ moveSnake();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{int}\ checkcollisionWithRocks();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{int}\ checkcollisionWithBody();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00153\ \textcolor{keywordtype}{void}\ sauvegarderScore(\textcolor{keywordtype}{int}\ score);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MONDE\_H}}
+
+\end{DoxyCode}
